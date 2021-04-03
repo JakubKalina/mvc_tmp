@@ -1,0 +1,27 @@
+﻿@model List<KredekLabDotNetCoreMvc.Models.CarViewModel>
+
+@{
+    ViewData["Title"] = "GetAllCars";
+}
+<html>
+<head>
+    <title>Get All Cars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="@Url.Content("~/Scripts/Style.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <!--Pętla po wszystkich samochodach-->
+    @foreach (var Car in Model)
+    {
+        <div>
+            <h2>@Car.Model</h2>
+            <h4>Producent: @Car.Manufacturer</h4>
+            <h4>Cena: @Car.Price</h4>
+            <img src="@Url.Content(Car.Photo)" alt="@Car.Model" />
+            <hr />
+        </div>
+    }
+
+</body>
+</html>

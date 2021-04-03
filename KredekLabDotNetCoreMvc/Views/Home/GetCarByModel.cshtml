@@ -1,0 +1,27 @@
+﻿@model KredekLabDotNetCoreMvc.Models.CarViewModel
+
+@{
+    ViewData["Title"] = "GetCarByModel";
+}
+
+
+<html>
+<head>
+    <title>Get car by model</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="@Url.Content("~/Scripts/Style.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <br />
+    <div>
+        <!--Model samochodu-->
+        <h2>Model: @Model.Model</h2>
+        <!--Producent-->
+        <h4>Marka: @Model.Manufacturer</h4>
+        <!--Cena-->
+        <h4>Cena: @Model.Price</h4>
+        <!--Zdjęcie samochodu-->
+        <img src=@Url.Content(Model.Photo) alt=@Model.Model>
+    </div>
+</body>
+</html>
